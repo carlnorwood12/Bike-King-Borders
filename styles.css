@@ -20,11 +20,18 @@
 ::selection {
   background-color: rgba(255, 255, 255, 0.1);
 }
-a{
--webkit-tap-highlight-color: transparent;
+button 
+{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body,
 html {
+  position: absolute;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -304,8 +311,7 @@ a:hover {
   height: 90px;
   width: 100%;
 }
-.bannerheader::after
-{
+.bannerheader::after {
   content: "";
   position: absolute;
   top: 0;
@@ -369,8 +375,7 @@ a:hover {
   align-items: center;
   z-index: 99;
 }
-#h1text-contact
-{
+#h1text-contact {
   position: absolute;
   left: 15px;
   font-size: clamp(1.25rem, 1.1161rem + 0.7143vw, 1.5625rem);
@@ -765,7 +770,6 @@ swiper-slide .title {
   justify-content: center;
 }
 
-
 #gallery-text {
   font-family: "bowlby";
   font-size: clamp(0.9375rem, 0.8036rem + 0.7143vw, 1.25rem);
@@ -775,9 +779,7 @@ swiper-slide .title {
 
 /* ----------- gallery ----------- */
 
-
 /* ----------- contact ----------- */
-
 
 .contact-section {
   display: flex;
@@ -786,8 +788,7 @@ swiper-slide .title {
   height: 100%;
 }
 
-.item-0-contact 
-{
+.item-0-contact {
   position: relative;
   height: 100px;
   display: flex;
@@ -852,11 +853,9 @@ form::after {
   margin-top: 8px;
   display: flex;
 }
-.active
-{
+.active {
   cursor: none;
 }
-
 
 label {
   color: var(--blue);
@@ -893,7 +892,6 @@ textarea {
   resize: none;
   height: 70px;
 }
-
 
 input[type="submit"] {
   width: 100%;
@@ -945,9 +943,7 @@ input:focus {
   border-radius: 50%;
 }
 
-
 /* ----------- contact ----------- */
-
 
 .item-0-1,
 .item-0-2,
@@ -1640,56 +1636,55 @@ textarea {
   height: 100px;
 }
 
-.footer
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
 }
 
 .item-0-footer {
-    position: relative;
-    left: 0;
-    flex-grow: 1;
-    max-height: 50%;
-    z-index: 99;
+  position: relative;
+  left: 0;
+  flex-grow: 1;
+  max-height: 50%;
+  z-index: 99;
 }
 path {
-    transition: fill 0.1s ease;
+  transition: fill 0.1s ease;
 }
 #instagram path,
 #youtube path,
 #facebook path,
 #linkedin path {
-    fill: var(--bodytext);
+  fill: var(--bodytext);
 }
 #instagram:hover > path {
-    fill: #e75989;
+  fill: #e75989;
 }
 #youtube:hover > path {
-    fill: #ff3333;
+  fill: #ff3333;
 }
 #facebook:hover > path {
-    fill: #6484c5;
+  fill: #6484c5;
 }
 #linkedin:hover > path {
-    fill: #13a0e5;
+  fill: #13a0e5;
 }
 
 #instagram,
 #youtube,
 #facebook,
 #linkedin {
-    width: 20px;
-    height: 20px;
-    margin-left: 5%;
-    transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  width: 20px;
+  height: 20px;
+  margin-left: 5%;
+  transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 #instagram:hover,
 #youtube:hover,
 #facebook:hover,
 #linkedin:hover {
-    cursor: pointer;
-    transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
