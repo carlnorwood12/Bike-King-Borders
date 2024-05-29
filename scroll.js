@@ -8,3 +8,25 @@ gsap.to("#bannertext", {
     end: "bottom+=1000",
   },
 });
+gsap.set("#h1text", { xPercent: -100, opacity: 0 });
+gsap.to("#h1text", {
+  xPercent: 0,
+  opacity: 1,
+  duration: 5,
+  stagger: 2,
+  scrollTrigger: {
+    scrub: true,
+    trigger: "#bkblogo",
+    start: "top",
+    end: "bottom+=1000",
+  },
+});
+gsap.set("#bkblogo", {
+  opacity: 0,
+  duration: 10,
+});
+gsap.to("#bkblogo", {
+  opacity: 1,
+});
+
+
