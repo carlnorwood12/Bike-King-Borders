@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
       window.location.href = targetUrl;
-    }, menuTimeline.duration() * 1500);
+    }, menuTimeline.duration() * 1000);
   });
 
   $(".menu-overlay").css("pointer-events", "none");

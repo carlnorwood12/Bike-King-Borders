@@ -28,5 +28,7 @@ gsap.set("#bkblogo", {
 gsap.to("#bkblogo", {
   opacity: 1,
 });
-
-
+gsap.set(".contact-1", { opacity: 0 });
+gsap.to(".contact-1", {
+  opacity: 1,
+});

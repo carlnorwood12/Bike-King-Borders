@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="background-overlay">
@@ -110,15 +111,17 @@
       speed: 0.3,
       ease: "power1.out",
       skewingMedia: 0.3,
+      hideOnLeave: true,
     });
+
     const elements = document.querySelectorAll(".grid-item");
     const images = [
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_biketrails.png?updatedAt=1716284162426",
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_shop.png?updatedAt=1716284163494",
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_customers.png?updatedAt=1716284162331",
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_staff.png?updatedAt=1716284161990",
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_shots_1.png?updatedAt=1716284163494",
-      "https://ik.imagekit.io/carl/bikekingborders/images/jpeg-optimizer_repairing.png?updatedAt=1716400428821",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/shots_2.png?updatedAt=1716935757348?tr=bl-6",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/SCR-20240528-ukev.jpeg?updatedAt=1716936020038?tr=bl-6",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/customers.png?updatedAt=1716935754695?tr=bl-6",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/staff.png?updatedAt=1716935756686?tr=bl-6",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/jpeg-optimizer_shots_1%20(1).png?updatedAt=1716936137823?tr=bl-6",
+      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/repairing.png?updatedAt=1716935755245?tr=bl-6",
     ];
     elements.forEach((el, index) => {
       el.addEventListener("mouseenter", () => {
@@ -126,8 +129,9 @@
           cursor.setImg(images[index]);
         }
       });
-      el.addEventListener("mouseleave", () => {
-        cursor.removeImg();
+      el.addEventListener("mouseleave", () => 
+      {
+          cursor.removeImg();
       });
     });
   </script>
