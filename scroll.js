@@ -9,6 +9,7 @@ gsap.to("#bannertext", {
   },
 });
 gsap.set("#h1text", { xPercent: -100, opacity: 0 });
+
 gsap.to("#h1text", {
   xPercent: 0,
   opacity: 1,
@@ -18,7 +19,10 @@ gsap.to("#h1text", {
     scrub: true,
     trigger: "#bkblogo",
     start: "top",
-    end: "bottom+=1000",
+    end: () => {
+      const extraDistance = window.innerHeight * 2;
+      return `bottom+=${extraDistance}`;
+    },
   },
 });
 gsap.set("#bkblogo", {
