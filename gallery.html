@@ -15,7 +15,7 @@
     <div class="menu-overlay">
       <div class="menu-cols">
         <div class="col-1">
-          <video poster="" playsinline autoplay muted loop>
+          <video playsinline autoplay muted loop>
             <source src="https://ik.imagekit.io/carl/bikekingborders/videos/mountain.mp4?updatedAt=1716912644609" type="video/webm" />
           </video>
         </div>
@@ -42,27 +42,27 @@
       </div>
     </div>
     <div class="h1-container home gallery">
-        <h1 id="h1text">Gallery</h1>
-      </div>
+      <h1 id="h1text">Gallery</h1>
+    </div>
     <div class="gallery-container">
       <div class="grid-container">
         <div class="grid-item">
-          <h1 id="gallery-text">TRAIL</h1>
+          <h1 class="gallery-text">TRAIL</h1>
         </div>
         <div class="grid-item">
-          <h1 id="gallery-text">SHOP</h1>
+          <h1 class="gallery-text">SHOP</h1>
         </div>
         <div class="grid-item">
-          <h1 id="gallery-text">FAMILY</h1>
+          <h1 class="gallery-text">FAMILY</h1>
         </div>
         <div class="grid-item">
-          <h1 id="gallery-text">STAFF</h1>
+          <h1 class="gallery-text">STAFF</h1>
         </div>
         <div class="grid-item">
-          <h1 id="gallery-text">BIKING</h1>
+          <h1 class="gallery-text">BIKING</h1>
         </div>
         <div class="grid-item">
-          <h1 id="gallery-text">STATION</h1>
+          <h1 class="gallery-text">STATION</h1>
         </div>
       </div>
     </div>
@@ -98,41 +98,39 @@
         <!--icon-->
       </div>
     </footer>
-  </body>
-
-  <!-- inspired by this but less js https://tympanus.net/Development/3DLettersMenuHover/ -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-  <script src="./script.js"></script>
-  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-  <script>
-    const cursor = new MouseFollower({
-      container: document.body,
-      speed: 0.3,
-      ease: "power1.out",
-      skewingMedia: 0.3,
-      hideOnLeave: true,
-    });
-
-    const elements = document.querySelectorAll(".grid-item");
-    const images = [
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/shots_2.png?updatedAt=1716935757348?tr=bl-6",
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/SCR-20240528-ukev.jpeg?updatedAt=1716936020038?tr=bl-6",
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/customers.png?updatedAt=1716935754695?tr=bl-6",
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/staff.png?updatedAt=1716935756686?tr=bl-6",
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/jpeg-optimizer_shots_1%20(1).png?updatedAt=1716936137823?tr=bl-6",
-      "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/repairing.png?updatedAt=1716935755245?tr=bl-6",
-    ];
-    elements.forEach((el, index) => {
-      el.addEventListener("mouseenter", () => {
-        if (index < images.length) {
-          cursor.setImg(images[index]);
-        }
+    <!-- inspired by this but less js https://tympanus.net/Development/3DLettersMenuHover/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    <script>
+      const cursor = new MouseFollower({
+        container: document.body,
+        speed: 0.3,
+        ease: "power1.out",
+        skewingMedia: 0.3,
+        hideOnLeave: true,
       });
-      el.addEventListener("mouseleave", () => 
-      {
+
+      const elements = document.querySelectorAll(".grid-item");
+      const images = [
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/shots_2.png?updatedAt=1716935757348?tr=bl-6",
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/SCR-20240528-ukev.jpeg?updatedAt=1716936020038?tr=bl-6",
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/customers.png?updatedAt=1716935754695?tr=bl-6",
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/staff.png?updatedAt=1716935756686?tr=bl-6",
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/jpeg-optimizer_shots_1%20(1).png?updatedAt=1716936137823?tr=bl-6",
+        "https://ik.imagekit.io/carl/bikekingborders/images/tr:w-300,h-300/repairing.png?updatedAt=1716935755245?tr=bl-6",
+      ];
+      elements.forEach((el, index) => {
+        el.addEventListener("mouseenter", () => {
+          if (index < images.length) {
+            cursor.setImg(images[index]);
+          }
+        });
+        el.addEventListener("mouseleave", () => {
           cursor.removeImg();
+        });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>
