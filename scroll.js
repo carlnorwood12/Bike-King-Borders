@@ -1,28 +1,21 @@
 gsap.set("#bannertext", { xPercent: 0 });
 gsap.to("#bannertext", {
-  xPercent: -100,
+  xPercent: -50,
+  color: '#8fb5c7',
   scrollTrigger: {
     scrub: true,
     trigger: ".video-container",
     start: "top",
-    end: "bottom+=1000",
+    end: "bottom",
   },
 });
-gsap.set("#h1text", { xPercent: -100, opacity: 0 });
-
-gsap.to("#h1text", {
-  xPercent: 0,
-  opacity: 1,
-  duration: 5,
-  stagger: 2,
+gsap.to(".bannerheader", {
+  backgroundColor: gsap.getProperty("html", "--black"),
   scrollTrigger: {
     scrub: true,
-    trigger: "#bkblogo",
+    trigger: ".video-container",
     start: "top",
-    end: () => {
-      const extraDistance = window.innerHeight * 2;
-      return `bottom+=${extraDistance}`;
-    },
+    end: "bottom+=10",
   },
 });
 gsap.set("#bkblogo", {
