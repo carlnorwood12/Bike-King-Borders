@@ -78,7 +78,7 @@ html::after
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.15;
-  z-index: 2;
+  z-index: 0;
   pointer-events: none;
 }
 .highlight {
@@ -469,7 +469,7 @@ swiper-container {
 }
 .parallax-bg {
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  mask-image: linear-gradient (rgba(0, 0, 0, 0), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
   position: absolute;
   left: 0;
   top: 0;
@@ -477,7 +477,6 @@ swiper-container {
   border-radius: var(--outer-radius);
   height: 100%;
   overflow: hidden;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
 }
@@ -541,17 +540,17 @@ swiper-slide .title {
 .first:nth-child(1) > .swiper-slide-image {
   background: url(https://ik.imagekit.io/carl/bikekingborders/images/mountain_background.jpg?updatedAt=1717681998136?tr=bl-6) no-repeat center center / cover;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  mask-image: linear-gradient (rgba(0, 0, 0, 0), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
 .first:nth-child(2) > .swiper-slide-image {
   background: url(https://ik.imagekit.io/carl/bikekingborders/images/hybrid_background.jpg?updatedAt=1717682375544?tr=bl-6) no-repeat center center / cover;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  mask-image: linear-gradient (rgba(0, 0, 0, 0), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
 .first:nth-child(3) > .swiper-slide-image {
   background: url(https://ik.imagekit.io/carl/bikekingborders/images/ebike_background.jpg?updatedAt=1717682822788?tr=bl-6) no-repeat center center / cover;
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
-  mask-image: linear-gradient (rgba(0, 0, 0, 0), transparent);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
 .swiper-slide-image {
   position: absolute;
@@ -639,14 +638,6 @@ swiper-slide .title {
 }
 .products-0-0:nth-child(1) {
   background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/marlin4.png?updatedAt=1716935752913?tr=bl-6");
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transition: width 0.3s ease, margin 0.3s ease;
-  width: 100%;
-}
-.swiper-slide:nth-child(2) .products-0-0 {
-  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/marlin5.png?updatedAt=1716935752971?tr=bl-6");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -786,7 +777,6 @@ swiper-slide .title {
   width: 90%;
   max-width: 700px;
 }
-
 .grid-item {
   position: relative;
   display: flex;
@@ -806,11 +796,11 @@ swiper-slide .title {
   font-size: 10px;
   align-items: center;
   justify-content: center;
-  transition: brightness 0.3 ease;
+  transition: brightness 0.3s ease;
 }
 .grid-item:hover {
   filter: brightness(1.3);
-  transition: brightness 0.3 ease;
+  transition: brightness 0.3s ease;
 }
 
 .gallery-text {
