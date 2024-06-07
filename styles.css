@@ -11,12 +11,9 @@
 :root {
   --bodytext: rgba(207, 223, 231, 0.75);
   --blue: #8fb5c7;
-  --realblue: #31bcfe;
   --divs: #797a7b;
   --placeholder: #55595d;
-  --darker: #191b1c;
   --black: #000000;
-  --shade: #6b8895;
   --green: #96d485;
   --outer-radius: 24px;
   --inner-radius: 19px;
@@ -50,7 +47,6 @@ html {
   background-color: #000;
   overflow-x: hidden;
 }
-
 .background-overlay::after {
   content: "";
   position: absolute;
@@ -338,14 +334,16 @@ a:hover {
 }
 .products:nth-child(1)::before,
 .products:nth-child(2)::before,
-.products:nth-child(3)::before {
+.products:nth-child(3)::before, 
+.content-section::before
+{
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #17262e);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -571,7 +569,7 @@ swiper-slide .title {
   top: 0;
   color: var(--blue);
   font-size: 15px;
-  font-weight: 900;
+  font-family: "sfprobold";
 }
 .products-0-1 p:nth-child(2) {
   position: absolute;
@@ -600,17 +598,6 @@ swiper-slide .title {
   .products-1 {
     display: none;
   }
-}
-.swiper-slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0.1;
-  z-index: 0;
 }
 .products-0 {
   position: relative;
@@ -659,6 +646,7 @@ swiper-slide .title {
 .products-0-1 {
   background-image: url("bbblurry.svg");
   background-size: cover;
+  border-radius: var(--inner-radius);
   background-position: center center;
   box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 1) 0px 0px 0px 1px;
 }
@@ -768,6 +756,7 @@ swiper-slide .title {
   border: none;
   font-family: "sfprobold";
   border: 3px solid black;
+  border-radius: var(--inner-radius);
   color: var(--bodytext);
   background-image: url("bbblurry.svg");
   background-size: cover;
@@ -1594,21 +1583,6 @@ video {
 .content-section:nth-child(odd)::after {
   transform: scaleX(-1);
 }
-.content-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(gradient2.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: inherit;
-  opacity: 0.05;
-  z-index: 0;
-}
 .h1container-products {
   height: 100px;
 }
@@ -1713,7 +1687,7 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 85%;
   max-width: 750px;
   border-radius: var(--outer-radius);
 }
