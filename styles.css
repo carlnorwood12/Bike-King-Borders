@@ -334,16 +334,15 @@ a:hover {
 }
 .products:nth-child(1)::before,
 .products:nth-child(2)::before,
-.products:nth-child(3)::before, 
-.content-section::before
-{
+.products:nth-child(3)::before,
+.content-section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #17262e);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #0b1317);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -1649,10 +1648,6 @@ path {
   background-color: var(--blue);
 }
 
-
-
-
-
 /* ---------------- Servicing ---------------- */
 #center {
   display: flex;
@@ -1668,8 +1663,7 @@ table th {
   font-family: "sfprobold";
   font-weight: 300 !important;
 }
-table td
-{
+table td {
   height: 50px;
   text-align: center;
 }
@@ -1681,8 +1675,7 @@ table {
   background-position: center center;
   box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 1) 0px 0px 0px 1px;
 }
-.uk-overflow-auto
-{
+.uk-overflow-auto {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1692,3 +1685,8 @@ table {
   border-radius: var(--outer-radius);
 }
 /* ---------------- Servicing ---------------- */
+.first-products {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
