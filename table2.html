@@ -5,47 +5,63 @@
     <title>Hello, world!</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/franken-ui-releases@0.0.12/dist/neutral.min.css" />
+    <style>
+      :root {
+        --bodytext: rgba(207, 223, 231, 0.75);
+        --blue: #8fb5c7;
+        --realblue: #31bcfe;
+        --divs: #797a7b;
+        --placeholder: #55595d;
+        --darker: #191b1c;
+        --black: #000000;
+        --shade: #6b8895;
+        --green: #96d485;
+        --outer-radius: 24px;
+        --inner-radius: 19px;
+      }
+      body {
+        height: 100vh;
+        background-color: black;
+      }
+      #center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .background-overlay::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(gradient2.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        z-index: 0;
+        pointer-events: none;
+      }
+      table th
+      {
+        height: 60px;
+        background-color: var(--blue);
+        color: var(--black) !important;
+        font-weight: 300 !important;
+      }
+      table {
+        width: 90%;
+        color: var(--bodytext);
+        background-image: url("bbblurry.svg");
+        background-size: cover;
+        background-position: center center;
+        box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 1) 0px 0px 0px 1px;
+      }
+    </style>
   </head>
-  <div class="hamburger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="menu-overlay">
-      <div class="menu-cols">
-        <div class="col-1">
-          <video playsinline autoplay muted loop>
-            <source src="mountain.mp4" type="video/mp4" />
-            <source src="https://ik.imagekit.io/carl/bikekingborders/videos/mountain.mp4?updatedAt=1717679632044" type="video/webm" />
-          </video>
-        </div>
-        <div class="col-2">
-          <div class="menu-link">
-            <a href="index.html">Home</a>
-          </div>
-          <div class="menu-link">
-            <a href="products.html">Products</a>
-          </div>
-          <div class="menu-link">
-            <a href="servicing.html">Servicing</a>
-          </div>
-          <div class="menu-link">
-            <a href="gallery.html">Gallery</a>
-          </div>
-          <div class="menu-link">
-            <a href="about.html">About</a>
-          </div>
-          <div class="menu-link">
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="h1-container home gallery">
-      <h1 class="h1text">Servicing</h1>
-    </div>
+  <body id="center">
     <div class="uk-overflow-auto">
       <table class="uk-table uk-table-small">
         <thead>
@@ -114,8 +130,5 @@
         </tbody>
       </table>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
   </body>
 </html>
