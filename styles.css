@@ -371,7 +371,6 @@ a:hover {
   margin-top: 5px;
   margin-left: 5px;
   margin-bottom: 10px;
-  max-width: 250px;
   padding: 0px 15px;
   align-items: center;
   height: clamp(3.125rem, 2.8571rem + 1.4286vw, 3.75rem);
