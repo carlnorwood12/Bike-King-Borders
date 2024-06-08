@@ -352,6 +352,9 @@ a:hover {
 .products:nth-child(3) {
   background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/ebike_background.jpg?updatedAt=1717682822788?tr=bl-6");
 }
+.products:nth-child(4) {
+  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/photo-1715447161612-1cb63697fa24.avif?updatedAt=1717869477666?tr=bl-6");
+}
 .about {
   top: clamp(3.125rem, -0.0893rem + 17.1429vw, 10.625rem);
   left: 10px;
@@ -620,8 +623,36 @@ swiper-slide .title {
   transition: width 0.3s ease, margin 0.3s ease;
   width: 100%;
 }
-.swiper-slide:nth-child(4) .products-0-0 {
-  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/marlin7.png?updatedAt=1716935752796?tr=bl-6");
+.accessories:nth-child(1) .products-0-0
+{
+  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/TrekVoda26ozWaterBottle-45036-N-Primary.webp?updatedAt=1717867430442?tr=bl-6");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: width 0.3s ease, margin 0.3s ease;
+  width: 100%;
+}
+.accessories:nth-child(2) .products-0-0
+{
+  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/TrekSolsticeMIPSHelmetCPSC_36024_E_Primary.webp?updatedAt=1717867879004?tr=bl-6");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: width 0.3s ease, margin 0.3s ease;
+  width: 100%;
+}
+.accessories:nth-child(3) .products-0-0
+{
+  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/GURoctaneElectrolyteCapsules_26166_A_Primary.webp?updatedAt=1717867735606?tr=bl-6");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: width 0.3s ease, margin 0.3s ease;
+  width: 100%;
+}
+.accessories:nth-child(4) .products-0-0
+{
+  background-image: url("https://ik.imagekit.io/carl/bikekingborders/images/SprintechCompactFlatBarMirror_33725_A_Primary.webp?updatedAt=1717868049602?tr=bl-6");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;

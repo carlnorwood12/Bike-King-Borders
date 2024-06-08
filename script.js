@@ -33,8 +33,6 @@ $(document).ready(function () {
     event.preventDefault();
     let targetUrl = $(this).attr("href");
     menuTimeline.reverse();
-    
-  
     $(".menu-overlay").css("pointer-events", "none");
     $(".hamburger-icon").removeClass("active");
     // wait for it to finish the animation then load the next page
